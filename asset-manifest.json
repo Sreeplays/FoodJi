@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FoodJi/static/css/main.d5cb7870.css",
-    "main.js": "/FoodJi/static/js/main.c6c24054.js",
+    "main.js": "/FoodJi/static/js/main.f665a8b0.js",
     "static/media/pngegg.png": "/FoodJi/static/media/pngegg.602725296c0f562ede5c.png",
     "static/media/Poori-Set.png": "/FoodJi/static/media/Poori-Set.88b4aaca684bd3b59528.png",
     "static/media/pngwing.com.png": "/FoodJi/static/media/pngwing.com.bc9c63c78363ddd60ae4.png",
@@ -13,10 +13,10 @@
     "static/media/cheeseburger.png": "/FoodJi/static/media/cheeseburger.88748af274ef2882ad7c.png",
     "index.html": "/FoodJi/index.html",
     "main.d5cb7870.css.map": "/FoodJi/static/css/main.d5cb7870.css.map",
-    "main.c6c24054.js.map": "/FoodJi/static/js/main.c6c24054.js.map"
+    "main.f665a8b0.js.map": "/FoodJi/static/js/main.f665a8b0.js.map"
   },
   "entrypoints": [
     "static/css/main.d5cb7870.css",
-    "static/js/main.c6c24054.js"
+    "static/js/main.f665a8b0.js"
   ]
 }
