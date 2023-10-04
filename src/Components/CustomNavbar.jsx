@@ -20,7 +20,7 @@ const CustomNavbar = () => {
           <a href="/"><p className=' text-[#00df9a] mx-[-10px] text-lg text-center'>FoodJi!!</p></a>
         </NavbarBrand>
         <div className='my-5 hidden md:flex'>
-          <div className='pl-4 text-white'><NavLink href='/order'>Order Now!!</NavLink></div>
+          <div className='pl-4 text-white'><NavLink href='/FoodJi/order'>Order Now!!</NavLink></div>
 
         </div>
     </div>
