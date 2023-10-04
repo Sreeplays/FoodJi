@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/FoodJi/static/css/main.d5cb7870.css",
+    "main.js": "/FoodJi/static/js/main.aaac2588.js",
+    "static/media/pngegg.png": "/FoodJi/static/media/pngegg.602725296c0f562ede5c.png",
+    "static/media/Poori-Set.png": "/FoodJi/static/media/Poori-Set.88b4aaca684bd3b59528.png",
+    "static/media/pngwing.com.png": "/FoodJi/static/media/pngwing.com.bc9c63c78363ddd60ae4.png",
+    "static/media/Veg-Wrap.png": "/FoodJi/static/media/Veg-Wrap.e99533e483f832cb1514.png",
+    "static/media/Pizza.png": "/FoodJi/static/media/Pizza.c5e6841799306312b18d.png",
+    "static/media/2-Parotta-Curry.png": "/FoodJi/static/media/2-Parotta-Curry.18106558722217e33d08.png",
+    "static/media/Ghee-Roast.png": "/FoodJi/static/media/Ghee-Roast.34a7d5e131890effa684.png",
+    "static/media/Chole-Bhatoora.png": "/FoodJi/static/media/Chole-Bhatoora.a1c3565d64c5ea5f25f4.png",
+    "static/media/cheeseburger.png": "/FoodJi/static/media/cheeseburger.88748af274ef2882ad7c.png",
+    "index.html": "/FoodJi/index.html",
+    "main.d5cb7870.css.map": "/FoodJi/static/css/main.d5cb7870.css.map",
+    "main.aaac2588.js.map": "/FoodJi/static/js/main.aaac2588.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5cb7870.css",
+    "static/js/main.aaac2588.js"
+  ]
+}
