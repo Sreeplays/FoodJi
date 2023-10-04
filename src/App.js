@@ -10,8 +10,8 @@ function App() {
     <>
     <CustomNavbar/>
     <Routes>
-      <Route path="/FoodJi/" element={<Home />} />
-      <Route path="/FoodJi/order" element={<OrderYourFood />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/order" element={<OrderYourFood />} />
     </Routes>
     </>
   );
