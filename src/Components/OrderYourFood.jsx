@@ -15,7 +15,7 @@ const OrderYourFood = () => {
    <div><h1 className='text-4xl font-serif rounded-md drop-shadow-md text-green-300 text-center mb-14 hover:animate-pulse delay-700 duration-300'>Our most DEMANDED items!!</h1></div>
     {/* Grids for most demandive items */}
     <div className='text-white justify-start grid md:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-12 pt-4 px-28'>
-      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-125 delay-600'>
+      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-115 delay-600'>
         
       <img src="https://www.transparentpng.com/thumb/burger/hot-burger-king-hd-png-9dzyCE.png" alt="hot burger king hd png @transparentpng.com" className='w-20 '></img>
         <div>
@@ -25,7 +25,7 @@ const OrderYourFood = () => {
         </div>
       </div>
       {/* NEXT ONE */}
-      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-125 delay-600'>
+      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-115 delay-600'>
         
       <img src={Parotta} alt="Kothu Parotta" className='w-20 '></img>
         <div>
@@ -35,7 +35,7 @@ const OrderYourFood = () => {
         
       </div>
       {/* NEXT ONE */}
-      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-125 delay-600'>
+      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-115 delay-600'>
         
       <img src={GheeRoast} alt="Ghee Roast" className='w-20 '></img>
         <div>
@@ -45,7 +45,7 @@ const OrderYourFood = () => {
         
       </div>
       {/* NEXT ONE */}
-      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-125 delay-600'>
+      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-115 delay-600'>
         
       <img src={ThaliNorth} alt="North Indian Thali Meals" className='w-20 '></img>
         <div>
@@ -55,7 +55,7 @@ const OrderYourFood = () => {
         
       </div>
       {/* NEXT ONE */}
-      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-125 delay-600'>
+      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-115 delay-600'>
         
       <img src={ParottaSet} alt="Kothu Parotta" className='w-20 '></img>
         <div>
@@ -65,7 +65,7 @@ const OrderYourFood = () => {
         
       </div>
       {/* NEXT ONE */}
-      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-125 delay-600'>
+      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-115 delay-600'>
         
       <img src={Bhatoora} alt="Chole Bhatoor a" className='w-20 '></img>
         <div>
@@ -75,7 +75,7 @@ const OrderYourFood = () => {
         
       </div>
       {/* NEXT ONE */}
-      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-125 delay-600'>
+      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-115 delay-600'>
         
       <img src={Pizza} alt="FoodJii Special Pizza" className='w-20 '></img>
         <div>
@@ -85,7 +85,7 @@ const OrderYourFood = () => {
         
       </div>
       {/* NEXT ONE */}
-      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-125 delay-600'>
+      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-115 delay-600'>
         
       <img src={Poori} alt="Poori Set (3)" className='w-20 '></img>
         <div>
@@ -95,7 +95,7 @@ const OrderYourFood = () => {
         
       </div>
       {/* NEXT ONE */}
-      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-125 delay-600'>
+      <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-115 delay-600'>
         
       <img src={VegWrap} alt="Veg Wrap" className='w-20 '></img>
         <div>
