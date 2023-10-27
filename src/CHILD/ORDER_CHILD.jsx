@@ -7,8 +7,10 @@ import Bhatoora from '../assets/Chole-Bhatoora.png'
 import Pizza from '../assets/Pizza.png'
 import Poori from '../assets/Poori-Set.png'
 import VegWrap from '../assets/Veg-Wrap.png'
+import { Button } from 'react-bootstrap'
 
 const ORDER_CHILD = () => {
+  
   return (
  <div className='text-white'>
   
@@ -22,7 +24,7 @@ const ORDER_CHILD = () => {
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>Cheese Burger</h3>
           <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.100</p>
-          
+          <Button className='text-green-300 italic text-bold'>Add to cart</Button>
         </div>
       </div>
       {/* NEXT ONE */}
@@ -32,6 +34,7 @@ const ORDER_CHILD = () => {
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>Veg Kothu Parotta</h3>
           <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.80</p>
+          <Button className='text-green-300 italic text-bold'>Add to cart</Button>
         </div>
         
       </div>
@@ -42,6 +45,7 @@ const ORDER_CHILD = () => {
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>Ghee Roast</h3>
           <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.70</p>
+          <Button className='text-green-300 italic text-bold'>Add to cart</Button>
         </div>
         
       </div>
@@ -52,6 +56,7 @@ const ORDER_CHILD = () => {
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>North Indian Thali</h3>
           <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.120</p>
+          <Button className='text-green-300 italic text-bold'>Add to cart</Button>
         </div>
         
       </div>
@@ -62,6 +67,7 @@ const ORDER_CHILD = () => {
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>3 Set Parotta with any Curry</h3>
           <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.100</p>
+          <Button className='text-green-300 italic text-bold'>Add to cart</Button>
         </div>
         
       </div>
@@ -72,6 +78,7 @@ const ORDER_CHILD = () => {
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>Chole Bhatoora</h3>
           <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.180</p>
+          <Button className='text-green-300 italic text-bold'>Add to cart</Button>
         </div>
         
       </div>
@@ -82,6 +89,7 @@ const ORDER_CHILD = () => {
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>FoodJii's Special Pizza</h3>
           <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.240</p>
+          <Button className='text-green-300 italic text-bold'>Add to cart</Button>
         </div>
         
       </div>
@@ -92,6 +100,7 @@ const ORDER_CHILD = () => {
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>Poori Set (3)</h3>
           <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.75</p>
+          <Button className='text-green-300 italic text-bold'>Add to cart</Button>
         </div>
         
       </div>
@@ -102,6 +111,7 @@ const ORDER_CHILD = () => {
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>Veg Wrap</h3>
           <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.150</p>
+          <Button className='text-green-300 italic text-bold'>Add to cart</Button>
         </div>
         
       </div>
