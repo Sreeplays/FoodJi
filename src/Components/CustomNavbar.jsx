@@ -12,7 +12,7 @@ const CustomNavbar = () => {
   return (
 <div>
 
-<Navbar className='px-2 flex w-full h-full justify-between bg-transparent '>
+<Navbar className='px-2 flex w-full h-full justify-between bg-transparent'>
   <div>
     <div className='flex' >
         <NavbarBrand className='font-bold text-2xl mr-4 mt-5 sm:text-3xl text-white pl-1'>
@@ -30,9 +30,9 @@ const CustomNavbar = () => {
             
     </div>
 </Navbar>
-<div className={!nav ? 'hidden ease-out duration-700 text-white relative border-none' : ' w-full pt-2  pr-2 pl-2 ease-in duration-400 text-white absolute bg-black bg-opacity-70'}>
-                 <div className='border-b border-zinc-500 w-full pb-3'><NavLink href='/'>Home</NavLink></div>
-                 <div className='border-b border-zinc-500 w-full pb-3'><NavLink href='/order'>Order Now!!!</NavLink></div>
+<div className={!nav ? 'hidden ease-out duration-700 text-white relative border-none' : ' w-full pt-2  pr-2 pl-2 ease-in duration-400 text-white bg-black bg-opacity-80'}>
+                 <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/'>Home</NavLink></div>
+                 <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/order'>Order Now!!!</NavLink></div>
   
                 
             
