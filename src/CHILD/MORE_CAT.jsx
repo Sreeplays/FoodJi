@@ -3,11 +3,13 @@ import { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import Pagination from './Pagination'
 import Popup from './Popup'
-import {AllMenuContext} from '../Components/AllMenuContext'
+import {AllMenuContext} from '../Components/AllMenu'
 
 
 const MORE_CAT = (props) => {
-
+    const [categories, setCategories] = useState([])
+ 
+   const [singleDish, setSingleDish] = useState([])
   //  console.log("Single Dishes are", props.singleDishVar)
     //Assigning these functions into an array to display the filtered results
     const [filteredDishesArray, setFilteredDishesArray] = useState([])
@@ -17,13 +19,39 @@ const MORE_CAT = (props) => {
     const [itemsPerPage, setItemsPerPage] = useState(4)
     const [popUp, setPopUp] = useState(false)
     const [detailedPopUp, setDetailedPopUp] = useState([])
-    
+    const [addedToCart, setAddedToCart] = useState([])
     //Using slice function to get pagination
     const indexOfLastDish = initialPage * itemsPerPage
     //1*4, 2*4, 3*4,
     const indexOfFirstDish = indexOfLastDish - itemsPerPage
     //4-4, 8-4, 12-4
     const showPagination = filteredDishesArray.slice(indexOfFirstDish, indexOfLastDish)
+
+
+  
+  // Getting all menu items
+  
+
+  async function getAllMealsDataCat() {
+    const API_SOURCE = 'https://www.themealdb.com/api/json/v1/1/categories.php'
+    let response = await fetch(API_SOURCE)
+    const categoryData = await response.json()
+    setCategories(categoryData.categories)
+    
+  }
+  async function getSingleMealData() {
+    const API_SOURCE = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian'
+    let response = await fetch(API_SOURCE)
+    const singleDishData = await response.json()
+    setSingleDish(singleDishData.meals)
+    
+  }
+  //by using useState we are showing the following async function in a faster way
+  useState(() => {
+
+    getAllMealsDataCat()
+    getSingleMealData()
+  }, [])
 
     function showPopupHandler (dishes){
       setPopUp(true)
@@ -35,7 +63,7 @@ const MORE_CAT = (props) => {
 
     // Fetching a Single Dish based on any one category
     let max = 9 
-    let singleDishData = props.singleDishVar.map((catItem, index) =>{
+    let singleDishData = singleDish.map((catItem, index) =>{
       if (index < max) {
       return(
         <a href="#" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
@@ -56,7 +84,7 @@ const MORE_CAT = (props) => {
     })
     // the function to filter the dishes based on the current cateogory when clicked
     function FilteredDishesResult (category){
-      props.setSingleDish([])
+      setSingleDish([])
       setActive(category)
       const filteredDishes = allMenu.filter((catItems) => {
         return catItems.strCategory === category
@@ -83,28 +111,32 @@ const MORE_CAT = (props) => {
       )
     }
     // Showing categories obtained from parent file
-    let categories = props.categories.map((catItems) => {
+    const categoriesmap = categories.map((catItems) => {
           
 
        return(         
         <div className=' rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 '>
           <div >
-            <Button onClick={() => {FilteredDishesResult(catItems.strCategory)}} className={catItems.strCategory == active ? 'bg-red-500 px-10 text-center py-2 rounded-lg bg-opacity-50 transition-colors transform text-white delay-200': ' text-black bg-[#73eaa2] px-10 text-center py-2 rounded-lg bg-opacity-50 transition-colors transform hover:text-white delay-200'} >{catItems.strCategory}</Button>
+            <Button onClick={() => {FilteredDishesResult(catItems.strCategory)}} className={catItems.strCategory == active ? 'bg-red-500 px-8 text-center py-2 rounded-lg bg-opacity-50 transition-colors transform text-white delay-200 mr-4': ' text-black bg-[#73eaa2] px-8 text-center py-2 rounded-lg bg-opacity-50 transition-colors transform hover:text-white delay-200 mr-4'} >{catItems.strCategory}</Button>
 
           </div>
         </div>
         )
     })
+    function AddToCartHandler(dishesName, dishesImage){
+      alert("Item added to cart")
+    }
+
 
   return (
     <>
-    {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp} ></Popup>}
+    {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp} addedCart={AddToCartHandler} ></Popup>}
     <div className='mt-[-68px] pt-16 '> 
      <div className='text-4xl font-serif rounded-md drop-shadow-md text-green-300 text-center mb-14 '><h1 >Not getting enough from our most ultimatum items. Go for the Expedition !!</h1> <p className='text-lg'>Select your deemed category and have a wide variety of selections!!</p></div>
 
     {/* Showing the categories present in the allMenus */}
-      <div className='text-white justify-start grid sm:grid-cols-2 lg:grid-cols-7 gap-7  pt-4 px-14 '>
-        {categories}
+      <div className='text-white justify-start grid sm:grid-cols-2 lg:grid-cols-7 gap-4  pt-4 px-14 '>
+        {categoriesmap}
       </div> 
     {/* Showing the filtered dishes when clicking the categories button */}
       <div className='text-white justify-start grid sm:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-7  pt-4 px-14 '>

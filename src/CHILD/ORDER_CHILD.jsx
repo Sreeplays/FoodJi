@@ -1,23 +1,24 @@
 import React, { useContext, useState } from 'react'
-import Parotta from '../assets/pngegg.png'
-import GheeRoast from '../assets/Ghee-Roast.png'
-import ThaliNorth from '../assets/pngwing.com.png'
-import ParottaSet from '../assets/2-Parotta-Curry.png'
-import Bhatoora from '../assets/Chole-Bhatoora.png'
-import Pizza from '../assets/Pizza.png'
-import Poori from '../assets/Poori-Set.png'
-import VegWrap from '../assets/Veg-Wrap.png'
+// import Parotta from '../assets/pngegg.png'
+// import GheeRoast from '../assets/Ghee-Roast.png'
+// import ThaliNorth from '../assets/pngwing.com.png'
+// import ParottaSet from '../assets/2-Parotta-Curry.png'
+// import Bhatoora from '../assets/Chole-Bhatoora.png'
+// import Pizza from '../assets/Pizza.png'
+// import Poori from '../assets/Poori-Set.png'
+// import VegWrap from '../assets/Veg-Wrap.png'
 import { Button } from 'react-bootstrap'
 import Popup from './Popup'
-import {AllMenuContext} from '../Components/AllMenuContext'
+import {AllMenuContext} from '../Components/AllMenu'
+import AddToCart from './AddToCart'
 
-const ORDER_CHILD = (props) => {
+const ORDER_CHILD = () => {
+  const allMenu = useContext(AllMenuContext)
   const [popUp, setPopUp] = useState(false)
   const [detailedPopUp, setDetailedPopUp] = useState([])
-  const allMenu = useContext(AllMenuContext)
-  console.log('The global menus are now available', allMenu)
-  let maxSpecialMeal = 9
-  const specialMeal = allMenu.map((catItem, index) => {
+  const [addedToCart, setAddedToCart] = useState('')
+  const specialMeals = allMenu.map((catItem, index) => {
+    const maxSpecialMeal = 9
     if (index < maxSpecialMeal) {
     return (
       <a  href="#" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>
@@ -42,18 +43,24 @@ const ORDER_CHILD = (props) => {
     function closePopUpHandler(){
       setPopUp(false)
     }
+    function AddToCartHandler(dishesName, dishesImage){
+      alert("Added to cart!!")
+      
+    }
 
   
   return (
     <div>
-    {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp} c></Popup>}
+      
+    {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp} dishesImage={addedToCart} addedCart={AddToCartHandler}></Popup>}
   <div className='text-white'>
-    
+  {/* <AddToCart dishesh={addedToCart}/> */}
     {/* Search Bar */}
    <div><h1 className='text-4xl font-serif rounded-md drop-shadow-md text-green-300 text-center hover:animate-pulse delay-700 duration-300'>Our most DEMANDED items!!</h1></div>
     {/* Grids for most demandive items */}
+    
     <div className='text-white justify-start grid md:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-12 pt-4 px-28 '>
-      {specialMeal}
+      {specialMeals}
     </div>
 
   </div>
