@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap'
 import Pagination from './Pagination'
 import Popup from './Popup'
 import {AllMenuContext} from '../Components/AllMenu'
+import AddToCart from './AddToCart'
 
 
 const MORE_CAT = (props) => {
@@ -19,7 +20,8 @@ const MORE_CAT = (props) => {
     const [itemsPerPage, setItemsPerPage] = useState(4)
     const [popUp, setPopUp] = useState(false)
     const [detailedPopUp, setDetailedPopUp] = useState([])
-    const [addedToCart, setAddedToCart] = useState([])
+    const [addToCart, setAddToCart] = useState([{}])
+
     //Using slice function to get pagination
     const indexOfLastDish = initialPage * itemsPerPage
     //1*4, 2*4, 3*4,
@@ -52,6 +54,18 @@ const MORE_CAT = (props) => {
     getAllMealsDataCat()
     getSingleMealData()
   }, [])
+  function addToCartHandler(addToCartImg, addToCartTitle){
+    setAddToCart(
+    [
+      ...addToCart,
+      {
+      "img": addToCartImg,
+      "title": addToCartTitle
+      }
+    ]
+  )
+
+  }
 
     function showPopupHandler (dishes){
       setPopUp(true)
@@ -66,7 +80,7 @@ const MORE_CAT = (props) => {
     let singleDishData = singleDish.map((catItem, index) =>{
       if (index < max) {
       return(
-        <a href="#" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
+        <a href="javascript:;" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
          <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
         
         <img src={catItem.strMealThumb} alt={catItem.strMeal} className='w-20 '></img>
@@ -123,23 +137,22 @@ const MORE_CAT = (props) => {
         </div>
         )
     })
-    function AddToCartHandler(dishesName, dishesImage){
-      alert("Item added to cart")
-    }
 
 
+
+  
   return (
     <>
-    {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp} addedCart={AddToCartHandler} ></Popup>}
+    {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp}  addToCartHandler={addToCartHandler}></Popup>}
     <div className='mt-[-68px] pt-16 '> 
      <div className='text-4xl font-serif rounded-md drop-shadow-md text-green-300 text-center mb-14 '><h1 >Not getting enough from our most ultimatum items. Go for the Expedition !!</h1> <p className='text-lg'>Select your deemed category and have a wide variety of selections!!</p></div>
-
+     <AddToCart dishes={addToCart}/>  
     {/* Showing the categories present in the allMenus */}
       <div className='text-white justify-start grid sm:grid-cols-2 lg:grid-cols-7 gap-4  pt-4 px-14 '>
         {categoriesmap}
       </div> 
     {/* Showing the filtered dishes when clicking the categories button */}
-      <div className='text-white justify-start grid sm:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-7  pt-4 px-14 '>
+      <div className='text-white justify-start grid sm:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-7  pt-4 px-32 '>
 
         {singleDishData}
         {singleDishData !=0 ||  filteredDishesArray.length != 0 ? showPagination : <div className='text-red-600 text-center text-2xl'> <h3 >Sorry this is the end!</h3></div>}

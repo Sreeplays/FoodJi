@@ -12,18 +12,19 @@ import Popup from './Popup'
 import {AllMenuContext} from '../Components/AllMenu'
 import AddToCart from './AddToCart'
 
-const ORDER_CHILD = () => {
+const ORDER_CHILD = (props) => {
   const allMenu = useContext(AllMenuContext)
   const [popUp, setPopUp] = useState(false)
   const [detailedPopUp, setDetailedPopUp] = useState([])
-  const [addedToCart, setAddedToCart] = useState('')
+  const [addToCart, setAddToCart] = useState([{}])
+  // alert("The added to cart items are", addToCart)
   const specialMeals = allMenu.map((catItem, index) => {
     const maxSpecialMeal = 9
     if (index < maxSpecialMeal) {
     return (
-      <a  href="#" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>
+      <a  href="javascript:;" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>
       <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
-        
+     
       <img src={catItem.strMealThumb} alt="hot burger king hd png @transparentpng.com" className='w-20 '></img>
         <div>
           <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>{catItem.strMeal}</h3>
@@ -36,6 +37,18 @@ const ORDER_CHILD = () => {
     }
 
   })
+  function addToCartHandler(addToCartImg, addToCartTitle){
+    setAddToCart(
+    [
+      ...addToCart,
+      {
+      "img": addToCartImg,
+      "title": addToCartTitle
+      }
+    ]
+  )
+
+  }
     function showPopupHandler (dishes){
       setPopUp(true)
       setDetailedPopUp(dishes)
@@ -43,19 +56,16 @@ const ORDER_CHILD = () => {
     function closePopUpHandler(){
       setPopUp(false)
     }
-    function AddToCartHandler(dishesName, dishesImage){
-      alert("Added to cart!!")
-      
-    }
+
 
   
   return (
     <div>
       
-    {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp} dishesImage={addedToCart} addedCart={AddToCartHandler}></Popup>}
+    {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp} addToCartHandler={addToCartHandler}></Popup>}
   <div className='text-white'>
-  {/* <AddToCart dishesh={addedToCart}/> */}
-    {/* Search Bar */}
+  <AddToCart dishes={addToCart}/>
+
    <div><h1 className='text-4xl font-serif rounded-md drop-shadow-md text-green-300 text-center hover:animate-pulse delay-700 duration-300'>Our most DEMANDED items!!</h1></div>
     {/* Grids for most demandive items */}
     
