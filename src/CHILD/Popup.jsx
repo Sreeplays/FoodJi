@@ -16,7 +16,7 @@ const Popup = ({closeBtn, detail, addToCartHandler}) => {
       <button className="absolute bg-[#ffb902] p-3 sm:bottom-[5rem] bottom-[8rem] sm:right-[10rem] right-[4rem] rounded-lg mb-1 hover:bg-green-300 delay-300" onClick={()=>addToCartHandler(catItem.strMealThumb, catItem.strMeal)}>Add to Cart</button>
       </div>
       <h4 className="text-center top-[360px] absolute text-white font-mono font-extrabold text-xl pb-4">Ingredients</h4>
-      <ul className="items-center justify-center bottom-[15rem] absolute flex sm:grid-rows-4 grid-rows-2 gap-3 mb-4 mt-4">
+      <ul className="items-center justify-center bottom-[12rem] absolute flex sm:grid-rows-4 grid-rows-2 gap-3 mb-4 mt-4">
         <li className="px-4 text-black rounded-lg py-2 gap-3 bg-red-500"> {catItem.strIngredient1} </li>
         <li className="px-4 text-black rounded-lg py-2 gap-3 bg-red-500"> {catItem.strIngredient2} </li>
         <li className="px-4 text-black rounded-lg py-2 gap-3 bg-red-500"> {catItem.strIngredient3} </li>

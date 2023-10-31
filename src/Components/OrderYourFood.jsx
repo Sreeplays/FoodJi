@@ -25,8 +25,7 @@ const OrderYourFood = () => {
 
   return (
   <AllMenu >
-    
-    <ORDER_CHILD /> 
+  
     
     <MORE_CAT /> 
 
