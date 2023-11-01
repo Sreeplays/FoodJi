@@ -5,6 +5,7 @@ import MORE_CAT from '../CHILD/MORE_CAT'
 import Loader from '../CHILD/Loader'
 import {AllMenu} from './AllMenu'
 import AddToCart from '../CHILD/AddToCart'
+import {AppProvider} from '../globalContext/AppProvider'
 
 export const AllMenuContext = React.createContext()
 const OrderYourFood = () => {
@@ -24,12 +25,14 @@ const OrderYourFood = () => {
   // console.log("The Required meals are,", veg)
 
   return (
+  <AppProvider>
   <AllMenu >
   
     
     <MORE_CAT /> 
 
   </AllMenu>
+  </AppProvider>
   )
 }
 

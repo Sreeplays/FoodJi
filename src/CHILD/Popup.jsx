@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { Button, Popover } from "react-bootstrap";
 import { AllMenuContext } from "../Components/AllMenu";
 import AddToCart from "./AddToCart";
-
+import { DispatchContext } from "../globalContext/AppProvider";
 const Popup = ({closeBtn, detail, addToCartHandler}) => {
  const allMenu = useContext(AllMenuContext)
+ const addDishes = useContext(DispatchContext)
   const popItem = allMenu.filter((catItem) => {
     return catItem.strMeal === detail
   }).map((catItem) => {
@@ -13,7 +14,8 @@ const Popup = ({closeBtn, detail, addToCartHandler}) => {
       <div className="mb-36 ">
       <img src={catItem.strMealThumb} alt="Popup Image" className="w-[1300px] h-[220px] object-cover border-[rgb(17,17,17)] rounded-lg" />
       <h2 className="text-white text-center font-extrabold font-serif text-2xl relative">{catItem.strMeal}</h2>
-      <button className="absolute bg-[#ffb902] p-3 sm:bottom-[5rem] bottom-[8rem] sm:right-[10rem] right-[4rem] rounded-lg mb-1 hover:bg-green-300 delay-300" onClick={()=>addToCartHandler(catItem.strMealThumb, catItem.strMeal)}>Add to Cart</button>
+      <button className="absolute bg-[#ffb902] p-3 sm:bottom-[5rem] bottom-[8rem] sm:right-[10rem] right-[4rem] rounded-lg mb-1 hover:bg-green-300 delay-300" onClick={()=> addDishes({type: 'add_to_cart', payload: {item: catItem.strMeal, img: catItem.strMealThumb}})}>Add to Cart</button>
+      {/*  */}
       </div>
       <h4 className="text-center top-[360px] absolute text-white font-mono font-extrabold text-xl pb-4">Ingredients</h4>
       <ul className="items-center justify-center bottom-[12rem] absolute flex sm:grid-rows-4 grid-rows-2 gap-3 mb-4 mt-4">

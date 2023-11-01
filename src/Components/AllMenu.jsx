@@ -4,7 +4,7 @@ import Loader from '../CHILD/Loader'
 import { useState } from 'react'
 
 export const AllMenuContext = React.createContext()
-export const AllMenu = (props) => {
+export const AllMenu = ({children}) => {
     const [menu, setMenu] = useState([])
     const [loading, setLoading] = useState(true)
     async function getAllMealsData() {
@@ -21,7 +21,7 @@ export const AllMenu = (props) => {
 
     return (
     <AllMenuContext.Provider value={menu}>
-        {!loading ? props.children : <Loader/>}
+        {!loading ? children : <Loader/>}
     </AllMenuContext.Provider>
     )
 
