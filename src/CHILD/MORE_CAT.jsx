@@ -21,7 +21,7 @@ const MORE_CAT = (props) => {
     const [popUp, setPopUp] = useState(false)
     const [detailedPopUp, setDetailedPopUp] = useState([])
     const [addToCart, setAddToCart] = useState([{}])
-
+    
     //Using slice function to get pagination
     const indexOfLastDish = initialPage * itemsPerPage
     //1*4, 2*4, 3*4,
@@ -108,7 +108,7 @@ const MORE_CAT = (props) => {
         <img src={catItem.strMealThumb} alt={catItem.strMeal} className='w-20 '></img>
           <div>
             <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>{catItem.strMeal}</h3>
-            {/* <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.100</p> */}
+            <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.100</p>
             <Button className='text-green-300 italic text-bold'>Add to cart</Button>
           </div>
         </div>
@@ -132,7 +132,7 @@ const MORE_CAT = (props) => {
          <img src={catItem.strMealThumb} alt={catItem.strMeal} className='w-20 '></img>
            <div>
              <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>{catItem.strMeal}</h3>
-             {/* <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.100</p> */}
+             <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.100</p>
              <Button className='text-green-300 italic text-bold'>Add to cart</Button>
            </div>
          </div>
@@ -192,6 +192,7 @@ const MORE_CAT = (props) => {
 
         {singleDishData}
         {singleDishData !=0 ||  filteredDishesArray.length != 0 ? showPagination : <div className='text-red-600 text-center text-2xl'> <h3 >Sorry this is the end!</h3></div>}
+        
       </div> 
       <Pagination filteredDishes={filteredDishesArray} itemsPerPage={itemsPerPage} initialPage={initialPage} setInitialPage={setInitialPage}/>
     </div>

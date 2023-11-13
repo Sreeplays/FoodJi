@@ -18,7 +18,7 @@ const Pagination = (props) => {
         
     })
   return (
-    <section className='pt-4 '><ul className='text-black flex top-0 gap-4 flex-row pb-6 border-white items-center justify-center px-10'>{pages} </ul> </section>
+    <div><ul className='text-black flex gap-4 pb-6 border-white items-center justify-center'>{pages} </ul> </div>
   )
 }
 

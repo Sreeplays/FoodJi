@@ -6,6 +6,7 @@ import Loader from '../CHILD/Loader'
 import {AllMenu} from './AllMenu'
 import AddToCart from '../CHILD/AddToCart'
 import {AppProvider} from '../globalContext/AppProvider'
+import Checkout from '../CHILD/Checkout'
 
 export const AllMenuContext = React.createContext()
 const OrderYourFood = () => {
@@ -30,8 +31,9 @@ const OrderYourFood = () => {
   
     
     <MORE_CAT /> 
-
+    <Checkout/>
   </AllMenu>
+  
   </AppProvider>
   )
 }
