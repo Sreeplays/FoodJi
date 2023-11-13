@@ -1,6 +1,8 @@
+
 # FoodJii!!! - A alternate dummy Food app.
 
-![App Screenshot](https://via.placeholder.com/578x400/f8f8f8?text=In+Progress+(Coming+Soon))
+![App Screenshot](https://via.placeholder.com/578x400?text=In+Progress+(Coming+Soon))
+
 
 # FoodJii!!! - A alternate dummy Food app.
 
@@ -55,18 +57,33 @@ To run this project, you will need to add the following environment variables to
 ### production
 `/build`
 ### misc
-```
-DS_Store
+
+`DS_Store
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.development.local`
 
-npm-debug.log*
+`.env.test.local
+.env.production.local`
+
+`npm-debug.log*
 yarn-debug.log*
-yarn-error.log* `
+yarn-error.log*`
 
+## Lessons Learned
 
+What did you learn while building this project? What challenges did you face and how did you overcome them?
+
+- Learned how to fetch api's
+- Learned how to use and make a global context variable
+- Learned how to use .map, useEffect, useContext, useState in a proper way
+- Learned what is useReducer
+- Learned how use conditional Rendering
+
+I was caught up with bugs almost everyday
+- It made my brain burn up some calories 
+- Understood how and why this happens 
+- Fixed most of those bugs on my own
+- Used chatGPT and Understood how AI can help programmers.
 ## Authors (Its Just me)
 
 - [@Sreeplays](https://www.github.com/Sreeplays)
@@ -76,5 +93,5 @@ yarn-error.log* `
 
 Here are some related projects on Food delivery topic.
 
-[Food Delivery WebApp made with javascript](https://github.com/topics/food-delivery-application?l=javascript&o=desc&s=)
+[Food Delivery WebApps](https://github.com/topics/food-delivery-application?l=javascript&o=desc&s=)
 
