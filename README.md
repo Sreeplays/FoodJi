@@ -1,72 +1,77 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FoodJii!!! - A alternate dummy Food app.
 
-## Available Scripts
+This project was bootstrapped with
+[Create React App](https://github.com/facebook/create-react-app) 
 
-In the project directory, you can run:
+This works like almost other food ordering apps like swiggy and dominos. You guys can view it pretty soon as I complete all the functionalities. 
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Run Locally
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone the project
 
-### `yarn test`
+```bash
+  git clone https://github.com/Sreeplays/FoodJi
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Go to the project directory
 
-### `yarn build`
+```bash
+  cd food-delivery-webapp
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies (Installs all the required dependencies)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the server
 
-### `yarn eject`
+```bash
+  npm start
+```
+#### OR
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  yarn run start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Gitignore Variables (.gitignore file)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run this project, you will need to add the following environment variables to your .git file
 
-## Learn More
+### dependancies
+`/node_modules
+/.pnp
+.pnp.js`
+### testing
+`/coverage`
+### production
+`/build`
+### misc
+```
+DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log* `
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Authors (Its Just me)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [@Sreeplays](https://www.github.com/Sreeplays)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Related
 
-### Making a Progressive Web App
+Here are some related projects on Food delivery topic.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[Food Delivery WebApp made with javascript](https://github.com/topics/food-delivery-application?l=javascript&o=desc&s=)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# FoodJii
-# FoodJi
