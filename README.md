@@ -1,6 +1,6 @@
 # FoodJii!!! - A alternate dummy Food app.
 
-![App Screenshot](https://via.placeholder.com/578x400?text=In+Progress+(Coming+Soon))
+![App Screenshot](https://via.placeholder.com/578x400/f8f8f8?text=In+Progress+(Coming+Soon))
 
 # FoodJii!!! - A alternate dummy Food app.
 
