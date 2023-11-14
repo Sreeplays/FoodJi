@@ -37,13 +37,13 @@ const MORE_CAT = (props) => {
       if (index < maxSpecialMeal) {
       return (
         <a  href="javascript:;" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>
-        <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
+        <div className='border glass rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
        
         <img src={catItem.strMealThumb} alt="hot burger king hd png @transparentpng.com" className='w-20 '></img>
           <div>
-            <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>{catItem.strMeal}</h3>
-            <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.100</p>
-            <Button className='text-green-300 italic text-bold'>Add to cart</Button>
+            <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-[#00df9a] py-2 my-2'>{catItem.strMeal}</h3>
+            <p className='font-extralight italic backdrop-blur-sm'>For Rs.100</p>
+            {/* <Button className='text-green-300 italic text-bold'>Add to cart</Button> */}
           </div>
         </div>
         </a>
@@ -102,14 +102,14 @@ const MORE_CAT = (props) => {
     let singleDishData = singleDish.map((catItem, index) =>{
       if (index < max) {
       return(
-        <a href="javascript:;" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
-         <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
+        <a href="#" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
+         <div className='border glass rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
         
         <img src={catItem.strMealThumb} alt={catItem.strMeal} className='w-20 '></img>
           <div>
-            <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>{catItem.strMeal}</h3>
-            <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.100</p>
-            <Button className='text-green-300 italic text-bold'>Add to cart</Button>
+            <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-[#00df9a] py-2 my-2'>{catItem.strMeal}</h3>
+            <p className='font-extralight italic backdrop-blur-sm'>For Rs.100</p>
+            {/* <Button className='text-green-300 italic text-bold'>Add to cart</Button> */}
           </div>
         </div>
         </a>
@@ -127,13 +127,13 @@ const MORE_CAT = (props) => {
       }).map((catItem) => {
         return (
           <a href="#" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
-          <div className='border border-white rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
+          <div className='border glass rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
          
          <img src={catItem.strMealThumb} alt={catItem.strMeal} className='w-20 '></img>
            <div>
-             <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-green-300 py-2 my-2'>{catItem.strMeal}</h3>
-             <p className='text-gray-100 font-extralight italic backdrop-blur-sm'>For Rs.100</p>
-             <Button className='text-green-300 italic text-bold'>Add to cart</Button>
+             <h3 className='text-xl font-semibold rounded-md drop-shadow-md text-[#00df9a] py-2 my-2'>{catItem.strMeal}</h3>
+             <p className='font-extralight italic backdrop-blur-sm'>For Rs.100</p>
+             {/* <Button className='text-green-300 italic text-bold'>Add to cart</Button> */}
            </div>
          </div>
          </a>
@@ -168,27 +168,27 @@ const MORE_CAT = (props) => {
     {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp}  addToCartHandler={addToCartHandler}></Popup>}
     <div>
     <AddToCart dishes={addToCart}/>
-    <div className='text-white'>
+    <div className=''>
     
   
-     <div><h1 className='text-4xl font-serif rounded-md drop-shadow-md text-green-300 text-center hover:animate-pulse delay-700 duration-300'>Our most DEMANDED items!!</h1></div>
+     <div><h1 className='text-4xl font-serif rounded-md drop-shadow-md text-[#00df9a] text-center hover:animate-pulse delay-700 duration-300'>Our most DEMANDED items!!</h1></div>
       {/* Grids for most demandive items */}
       
-      <div className='text-white justify-start grid md:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-12 pt-4 px-36 '>
+      <div className=' justify-start grid md:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-12 pt-4 px-36 '>
         {specialMeals}
       </div>
   
     </div>
     </div>
     <div className='mt-[-68px] pt-16 '> 
-     <div className='text-4xl font-serif rounded-md drop-shadow-md text-green-300 text-center mb-14 '><h1 >Not getting enough from our most ultimatum items. Go for the Expedition !!</h1> <p className='text-lg'>Select your deemed category and have a wide variety of selections!!</p></div>
+     <div className='text-4xl font-serif rounded-md drop-shadow-md text-[#00df9a] text-center mb-14 '><h1 >Not getting enough from our most ultimatum items. Go for the Expedition !!</h1> <p className='text-lg'>Select your deemed category and have a wide variety of selections!!</p></div>
        
     {/* Showing the categories present in the allMenus */}
-      <div className='text-white justify-start grid sm:grid-cols-2 lg:grid-cols-7 gap-4  pt-4 px-14 '>
+      <div className='justify-start grid sm:grid-cols-2 lg:grid-cols-7 gap-4  pt-4 px-14 '>
         {categoriesmap}
       </div> 
     {/* Showing the filtered dishes when clicking the categories button */}
-      <div className='text-white justify-start grid sm:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-7  pt-4 px-32 '>
+      <div className=' justify-start grid sm:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-7  pt-4 px-32 '>
 
         {singleDishData}
         {singleDishData !=0 ||  filteredDishesArray.length != 0 ? showPagination : <div className='text-red-600 text-center text-2xl'> <h3 >Sorry this is the end!</h3></div>}
