@@ -37,8 +37,8 @@ const AddToCart = ({dishes}) => {
         <div className='w-[100%]  '>
             <h6 className="text-center font-italic font-bold text-white ">Your Cart </h6>
             {cartAdded}
-            {cartAdded.length != 0 ? <><Link activeClass='active' to="1" spy={true} smooth={true} offset={-70} duration={500}><Button className='bg-green-300 italic text-bold text-black hover:bg-red-400 delay-300 px-2 mr-6 py-1 rounded-lg'>Checkout!</Button></Link><div><button className='bg-red-600 italic text-bold text-white delay-300 px-3 mt-3 mr-6 py-1 rounded-lg' onClick={() => rmvDishes({ type: 'remove', payload: 'cartAdded' })}> Remove All </button></div></> : <div></div>}
-            
+            {cartAdded.length != 0 ? <><div><button className='bg-red-600 italic text-bold text-white delay-300 px-3 mt-3 mr-6 py-1 rounded-lg' onClick={() => rmvDishes({ type: 'remove', payload: 'cartAdded' })}> Remove All </button></div></> : <div></div>}
+            <Link activeClass='active' to="1" spy={true} smooth={true} offset={-70} duration={500}><Button className='bg-green-300 italic text-bold text-black hover:bg-red-400 delay-300 px-2 mr-6 py-1 rounded-lg'>Checkout!</Button></Link>
 
         </div>
         </div>

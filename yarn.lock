@@ -1234,6 +1234,13 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.37.0.tgz#cf1b5fa24217fe007f6487a26d765274925efa7d"
   integrity sha512-x5vzdtOOGgFVDCUs81QRB2+liax8rFg3+7hqM+QhBG0/G3F1ZsoYl97UrqgHgQ9KKT7G6c4V+aTUCgu/n22v1A==
 
+"@google-pay/button-react@^3.0.10":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@google-pay/button-react/-/button-react-3.0.10.tgz#e2e75e5c8e45fb882a3a0d1290ed4e6f0350e657"
+  integrity sha512-6lFESkpkIqnXGbbeD+kZ696+MJI+TrZYFBTuGpSvf98nvaE7fHffeV34i2ebZBqUkLi/4HicoVc8sG71KWKy+g==
+  dependencies:
+    "@types/googlepay" "^0.7.0"
+
 "@heroicons/react@^2.0.17":
   version "2.0.17"
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-2.0.17.tgz#42a8086bc434ceefc03592f20c4e81b11e915cf8"
@@ -2003,6 +2010,11 @@
     "@types/express-serve-static-core" "^4.17.33"
     "@types/qs" "*"
     "@types/serve-static" "*"
+
+"@types/googlepay@^0.7.0":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@types/googlepay/-/googlepay-0.7.4.tgz#271a1b3b191107713a392314bd39c2ce8a1b4b84"
+  integrity sha512-7j0iu4lUQfML5c+3zS8t/BNUJFH5MqKnMWEFD141eWsAXmmm6piJ0p+mJlM2Om61FYGe5pUWKRYB8HlZT7n4rQ==
 
 "@types/graceful-fs@^4.1.2":
   version "4.1.6"
