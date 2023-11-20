@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-import { NavLink, Navbar, NavbarBrand } from 'reactstrap'
+import { Button, NavItem, NavLink, Navbar, NavbarBrand } from 'reactstrap'
 import logoimg from '../assets/cheeseburger.png'
 import {AiOutlineMenu, AiOutlineClose, AiOutlineHome} from 'react-icons/ai'
 import { NavDropdown } from 'react-bootstrap'
 import { useEffect } from 'react'
+import { UserAuth } from '../FireBase-Data-Config/AuthContext'
 
 const CustomNavbar = () => {
     const [nav, setNav] = useState(false);
@@ -26,6 +27,17 @@ const CustomNavbar = () => {
       const localTheme = localStorage.getItem("theme");
       document.querySelector("html").setAttribute("data-theme", localTheme);
     }, [theme])
+
+    const { user, logOut } = UserAuth();
+
+    const handleSignOut = async () => {
+      try {
+        await logOut()
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
   return (
 <div>
 
@@ -38,9 +50,17 @@ const CustomNavbar = () => {
         </NavbarBrand>
         <div className='my-5 hidden md:flex'>
           <div className='pl-4 '><NavLink href='/order'>Order Now!!</NavLink></div>
+          <div className='pl-4 '><NavLink href='/about'>About</NavLink></div>
 
         </div>
-        <label className="swap swap-rotate right-0 fixed top-4">
+        <div className='hidden md:flex pr-3 lg:right-6 right-10 fixed top-3'>
+               
+
+               {user?.displayName ? (<> <Button className='px-3 mx-3' onClick={handleSignOut}>Logout</Button> <NavItem className='border border-red-300 py-4 px-7 font-bold'><NavLink href="/account">Account</NavLink></NavItem> </>) : (<></>)}
+                      
+                        
+          </div>
+        <label className="swap swap-rotate lg:right-0 right-5 fixed top-4">
   
   {/* this hidden checkbox controls the state */}
           <input type="checkbox" onChange={handleToggle} checked={theme == "retro" ? false : true} className='theme-controller'/>
@@ -54,16 +74,21 @@ const CustomNavbar = () => {
          </label>
     </div>
     </div>
+    
+
+
     <div className='md:hidden absolute top-6 right-1' onClick={handleClick}>
             {!nav ? (<AiOutlineMenu className=' text-white '/>) : (<AiOutlineClose className=' relative text-white'/>)}
             
     </div>
 </Navbar>
-<div className={!nav ? 'hidden ease-out duration-700 text-white relative border-none' : ' w-full pt-2  pr-2 pl-2 ease-in duration-400 text-white bg-black bg-opacity-80'}>
+<div className={!nav ? 'hidden ease-in-out delay-500 text-white relative border-none' : ' w-full pt-2  pr-2 pl-2 ease-in-out delay-500 text-white bg-black bg-opacity-80'}>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/'>Home</NavLink></div>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/order'>Order Now!!!</NavLink></div>
-  
-                
+                 <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/about'>About</NavLink></div> 
+                 <div className='hidden md:flex pr-3'>
+                  {user?.displayName ? (<> <Button className='px-3 mx-3' onClick={handleSignOut}>Logout</Button> <NavItem className='border border-red-300 py-4 px-7 font-bold'><NavLink href="/account">Account</NavLink></NavItem> </>) : (<></>)}
+                  </div> 
             
            </div>
 

@@ -7,15 +7,23 @@ import Home from "./Components/Home.jsx";
 import Checkout from "./CHILD/Checkout.jsx";
 import { AppProvider } from "./globalContext/AppProvider";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { AuthContextProvider } from "./FireBase-Data-Config/AuthContext.js";
+import Protected from "./FireBase-Data-Config/protected.js";
+import About from "./Components/About.jsx";
+import Account from "./Components/Account.jsx";
 function App() {
   return (
+    <AuthContextProvider>
     <AppProvider>
     <CustomNavbar/>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/order" element={<OrderYourFood />} />
+      <Route path="/order" element={<Protected> <OrderYourFood /> </Protected>} />
+      <Route path="/about" element={<About />} />
+      <Route path="/account" element={<Account />} />
     </Routes>
     </AppProvider>
+    </AuthContextProvider>
   );
 }
 
