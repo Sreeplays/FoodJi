@@ -41,7 +41,7 @@ const CustomNavbar = () => {
   return (
 <div>
 
-<Navbar className='px-2 flex w-full h-full justify-between bg-transparent'>
+<Navbar className='px-2 flex w-full h-full justify-between backdrop-blur-0'>
   <div>
     <div className='flex' >
         <NavbarBrand className='font-bold text-2xl mr-4 mt-5 sm:text-3xl text-white pl-1'>
@@ -56,7 +56,7 @@ const CustomNavbar = () => {
         <div className='hidden md:flex pr-3 lg:right-6 right-10 fixed top-3'>
                
 
-               {user?.displayName ? (<> <Button className='px-3 mx-3' onClick={handleSignOut}>Logout</Button> <NavItem className='border border-red-300 py-4 px-7 font-bold'><NavLink href="/account">Account</NavLink></NavItem> </>) : (<></>)}
+               {user?.displayName ? (<> <Button className='px-3 mx-3 my-1 glass bg-red-400 text-black' onClick={handleSignOut}>Logout</Button> <section className='border py-2 px-5 font-bold'><a href="/account">Account</a></section> </>) : (<></>)}
                       
                         
           </div>

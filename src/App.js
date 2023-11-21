@@ -20,7 +20,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/order" element={<Protected> <OrderYourFood /> </Protected>} />
       <Route path="/about" element={<About />} />
-      <Route path="/account" element={<Account />} />
+      <Route path="/account" element={<Protected> <Account /> </Protected>} />
     </Routes>
     </AppProvider>
     </AuthContextProvider>
