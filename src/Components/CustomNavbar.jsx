@@ -53,14 +53,14 @@ const CustomNavbar = () => {
           <div className='pl-4 '><NavLink href='/about'>About</NavLink></div>
 
         </div>
-        <div className='hidden md:flex pr-3 lg:right-6 right-10 fixed top-3'>
+        <div className='hidden md:flex pr-3 lg:right-10 right-14 fixed top-3'>
                
 
                {user?.displayName ? (<> <Button className='px-3 mx-3 my-1 glass bg-red-400 text-black' onClick={handleSignOut}>Logout</Button> <section className='border py-2 px-5 font-bold'><a href="/account">Account</a></section> </>) : (<></>)}
                       
                         
           </div>
-        <label className="swap swap-rotate lg:right-0 right-5 fixed top-4">
+        <label className="swap swap-rotate lg:right-3 right-5 fixed top-4">
   
   {/* this hidden checkbox controls the state */}
           <input type="checkbox" onChange={handleToggle} checked={theme == "retro" ? false : true} className='theme-controller'/>
@@ -82,7 +82,7 @@ const CustomNavbar = () => {
             
     </div>
 </Navbar>
-<div className={!nav ? 'hidden ease-in-out delay-500 text-white relative border-none' : ' w-full pt-2  pr-2 pl-2 ease-in-out delay-500 text-white bg-black bg-opacity-80'}>
+<div className={!nav ? 'hidden ease-in-out delay-500 text-white relative border-none' : ' w-full pt-2  pr-2 pl-2 ease-in-out delay-500 text-white bg-black bg-opacity-40'}>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/'>Home</NavLink></div>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/order'>Order Now!!!</NavLink></div>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/about'>About</NavLink></div> 

@@ -21,7 +21,10 @@ const Account = () => {
       <hr className='mb-14 mt-5 border-black'/>
       <div>
       <h1 className='text-[#00df9a] sm:text-3xl text-2xl md:py-6 font-sans font-extrabold hover:tracking-widest duration-700 pb-4 pt-16 mt-0 relative'><ReactTyped strings={['Hey, Welcome !']} typeSpeed={60}/></h1>
-        <p> {user?.displayName} </p>
+        <img src={user?.photoURL} alt="Profile pic" className='border rounded-full border-black' />
+        <p className='text-xl'> {user?.displayName} </p>
+        <p className='font-semibold text-base mt-3'>Email</p>
+        <p className='border my-2 bg-gray-700 italic text-white font-extralight font-serif rounded-lg px-2'>~ {user?.email} </p>
       </div>
       <button onClick={handleSignOut} className='border py-2 px-5 mt-10'>
         Logout
