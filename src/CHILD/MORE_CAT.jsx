@@ -164,17 +164,17 @@ const MORE_CAT = (props) => {
 
   
   return (
-    <>
+    <div className=''>
     {popUp && <Popup closeBtn={closePopUpHandler} detail={detailedPopUp}  addToCartHandler={addToCartHandler}></Popup>}
     <div>
     <AddToCart dishes={addToCart}/>
     <div className=''>
     
   
-     <div><h1 className='text-4xl font-serif rounded-md drop-shadow-md text-[#00df9a] text-center hover:animate-pulse delay-700 duration-300'>Our most DEMANDED items!!</h1></div>
+     <div><h1 className='md:text-4xl text-xl font-serif rounded-md drop-shadow-md text-[#00df9a] text-center hover:animate-pulse delay-700 duration-300'>Our most DEMANDED items!!</h1></div>
       {/* Grids for most demandive items */}
       
-      <div className=' justify-start grid md:grid-cols-2 lg:grid-cols-3 grid-rows-4 gap-12 pt-4 px-36 '>
+      <div className=' justify-start grid md:grid-cols-3 grid-cols-2 md:gap-12 gap-6 pt-4 md:px-36 px-20'>
         {specialMeals}
       </div>
   
@@ -196,7 +196,7 @@ const MORE_CAT = (props) => {
       </div> 
       <Pagination filteredDishes={filteredDishesArray} itemsPerPage={itemsPerPage} initialPage={initialPage} setInitialPage={setInitialPage}/>
     </div>
-    </>
+    </div>
   )
 }
 

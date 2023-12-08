@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@google-pay/button-react": "^3.0.10",
     "@heroicons/react": "^2.0.17",
     "@testing-library/jest-dom": "^5.14.1",

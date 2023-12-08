@@ -9,7 +9,7 @@ import { AppProvider } from "./globalContext/AppProvider";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { AuthContextProvider } from "./FireBase-Data-Config/AuthContext.js";
 import Protected from "./FireBase-Data-Config/protected.js";
-import About from "./Components/About.jsx";
+import Contact from "./Components/About.jsx";
 import Account from "./Components/Account.jsx";
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/order" element={<Protected> <OrderYourFood /> </Protected>} />
-      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/account" element={<Protected> <Account /> </Protected>} />
     </Routes>
     </AppProvider>

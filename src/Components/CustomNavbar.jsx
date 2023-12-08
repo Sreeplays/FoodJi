@@ -15,10 +15,10 @@ const CustomNavbar = () => {
 
     const handleToggle = (e) => {
       if (e.target.checked) {
-        setTheme("dark");
+        setTheme("business");
 
       }else{
-        setTheme("retro");
+        setTheme("nord");
       }
     }
 
@@ -50,20 +50,20 @@ const CustomNavbar = () => {
         </NavbarBrand>
         <div className='my-5 hidden md:flex'>
           <div className='pl-4 '><NavLink href='/order'>Order Now!!</NavLink></div>
-          <div className='pl-4 '><NavLink href='/about'>About</NavLink></div>
+          <div className='pl-4 '><NavLink href='/contact'>Contact Us</NavLink></div>
 
         </div>
-        <div className='hidden md:flex pr-3 lg:right-10 right-14 fixed top-3'>
+        <div className='md:flex flex pr-3 lg:right-10 right-14 fixed top-3'>
                
 
-               {user?.displayName ? (<> <Button className='px-3 mx-3 my-1 glass bg-red-400 text-black' onClick={handleSignOut}>Logout</Button> <section className='border py-2 px-5 font-bold'><a href="/account">Account</a></section> </>) : (<></>)}
+               {user?.photoURL ? (<> <Button className='px-3 mx-4 my-1 glass bg-red-400 text-black' onClick={handleSignOut}>Logout</Button> <a href="/account"> <img src={user?.photoURL} alt="Profile pic" className='rounded-box border-black py-2 px-5 h-12 w-26' /></a> </>) : (<></>)}
                       
                         
           </div>
-        <label className="swap swap-rotate lg:right-3 right-5 fixed top-4">
+        <label className="swap swap-rotate lg:right-5 right-7 fixed top-4">
   
   {/* this hidden checkbox controls the state */}
-          <input type="checkbox" onChange={handleToggle} checked={theme == "retro" ? false : true} className='theme-controller'/>
+          <input type="checkbox" onChange={handleToggle} checked={theme == "nord" ? false : true} className='theme-controller'/>
   
   {/* sun icon */}
             <svg className="swap-on fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
@@ -85,10 +85,8 @@ const CustomNavbar = () => {
 <div className={!nav ? 'hidden ease-in-out delay-500 text-white relative border-none' : ' w-full pt-2  pr-2 pl-2 ease-in-out delay-500 text-white bg-black bg-opacity-40'}>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/'>Home</NavLink></div>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/order'>Order Now!!!</NavLink></div>
-                 <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/about'>About</NavLink></div> 
-                 <div className='hidden md:flex pr-3'>
-                  {user?.displayName ? (<> <Button className='px-3 mx-3' onClick={handleSignOut}>Logout</Button> <NavItem className='border border-red-300 py-4 px-7 font-bold'><NavLink href="/account">Account</NavLink></NavItem> </>) : (<></>)}
-                  </div> 
+                 <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/contact'>Contact Us</NavLink></div> 
+                
             
            </div>
 

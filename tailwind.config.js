@@ -33,7 +33,7 @@ module.exports = {
 
   },
   daisyui: {
-    themes: ["retro", "dark"],
+    themes: ["nord", "business"],
   },
   plugins: [require("daisyui")],
 }
