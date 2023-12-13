@@ -1,8 +1,9 @@
-import React from 'react'
-import ContactPic from '../assets/Contact.jpg'
+import React, { useState } from 'react'
+import Contactimg from '../assets/contactNow.png'
 import emailjs from '@emailjs/browser'
 import { Button, Form, Input, Label } from 'reactstrap';
 const Contact = () => {
+  const [msg, setMsg] = useState(false)
   const sendEmail =(e) => {
     e.preventDefault();
     emailjs.sendForm('service_tpcnr0n', 'template_okrpsag', e.target, 'RY1AxGngOMrpk1wSq')
@@ -12,12 +13,11 @@ const Contact = () => {
                     console.log(error.text);
                 });
     e.target.reset();
-  if(sendEmail == true){
-    alert("your email has been send")
-  }              
+    setMsg(true);          
 };
   return (
     <div class="BG-IMG" >
+      <img className='w-full h-48 object-cover mix-blend-multiply' src={Contactimg} alt="/" />
       <h1 className='text-[#00df9a] text-center text-5xl font-extrabold font-serif'>Contact Us</h1>
       <p className=' text-center text-lg font-extralight font-sans pt-10'>Have any querie, doubts, or any issues OR payment is not getting tranfered, please feel FREE to call us</p>
       <div>
@@ -80,7 +80,7 @@ const Contact = () => {
                   Submit
                 </button>
               </div>
-
+              <div className='row-auto '>{msg ? <p className='text-[#00df9a] font-semibold duration-200 after:disabled'>Message successfully sent. We will try our best to assist you ASAP</p> : null}</div>
             </div>
             </Form>
           </div>
