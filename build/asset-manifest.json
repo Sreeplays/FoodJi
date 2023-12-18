@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.00e956d5.css",
+    "main.js": "/static/js/main.c22413e9.js",
+    "static/media/cheeseburger.png": "/static/media/cheeseburger.88748af274ef2882ad7c.png",
+    "static/media/contactNow.png": "/static/media/contactNow.b5976941ed19c7e2c2fa.png",
+    "index.html": "/index.html",
+    "main.00e956d5.css.map": "/static/css/main.00e956d5.css.map",
+    "main.c22413e9.js.map": "/static/js/main.c22413e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00e956d5.css",
+    "static/js/main.c22413e9.js"
+  ]
+}
