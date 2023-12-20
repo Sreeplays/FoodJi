@@ -15,8 +15,8 @@ const Popup = ({closeBtn, detail, addToCartHandler}) => {
       <img src={catItem.strMealThumb} alt="Popup Image" className="w-[1300px] h-[220px] object-cover border-[rgb(17,17,17)] rounded-lg" />
       <h2 className="text-white text-center font-extrabold font-serif text-2xl relative">{catItem.strMeal}</h2>
       <p className="text-center text-lg text-[#00df9a] animate-bounce delay-100 duration-200">Enjoy a feasty ensilage!!</p>
-      <Button className="bg-[#ffb902] text-base font-bold text-black md:p-3p px-6 py-1 mt-2 rounded-lg mb-1 hover:bg-green-300 delay-300 gap-4 ml-[-105px] mr-14" accessKey="s" onClick={()=> addDishes({type: 'add_to_cart', payload: {item: catItem.strMeal, img: catItem.strMealThumb}})}>Add to Cart <p className="text-xs font-serif italic">(alt+s)</p></Button>
-      <Button className="bg-green-400 mt-2 text-black px-6 py-1 rounded-lg text-base font-bold cursor-pointer transition-all duration-300 hover:bg-red-500 absolute" onClick={closeBtn} accessKey="e">Close <p className="text-xs font-serif italic">(alt+e)</p></Button>
+      <Button className="bg-[#ffb902] text-base font-bold text-black md:p-3p px-6 py-1 mt-2 rounded-lg mb-1 hover:bg-green-300 delay-300 gap-4 ml-[-105px] mr-14" accessKey="s" onClick={()=> addDishes({type: 'add_to_cart', payload: {item: catItem.strMeal, img: catItem.strMealThumb}})}>Add to Cart <p className="text-xs font-serif italic">(shift+alt+s)</p></Button>
+      <Button className="bg-green-400 mt-2 text-black px-6 py-1 rounded-lg text-base font-bold cursor-pointer transition-all duration-300 hover:bg-red-500 absolute" onClick={closeBtn} accessKey="e">Close <p className="text-xs font-serif italic">(shift+alt+e)</p></Button>
 
       </div>
      
