@@ -27,8 +27,8 @@ const Checkout = () => {
 
         {cartAdded}
     </div>
-    <div className='text-3xl font-serif rounded-md drop-shadow-md text-[#00df9a] text-center mb-8'><h1 >Order and pay with Gpay.</h1></div>
-    <div className=' mx-[38.5rem] mb-10 text-center '>
+    <div className='text-3xl font-serif rounded-md drop-shadow-md text-[#00df9a] text-center mb-8'><h1 >Order and pay with Gpay.<p className='sm:text-base text-sm font-mono italic text-gray-400 duration-700'>(*A TEST Gpay API call feature.)</p></h1></div>
+    <div className=' md:mx-[38.5rem] mb-10 text-center '>
      <GooglePayButton environment="TEST" paymentRequest={{
                                   apiVersion: 2,
                                   apiVersionMinor: 0,

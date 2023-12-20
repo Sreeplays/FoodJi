@@ -30,6 +30,7 @@ const LoginSignup = () => {
         <h1 className='text-[#00df9a] sm:text-5xl text-4xl md:py-6 font-sans font-extrabold hover:tracking-widest duration-700 pb-4 pt-16 mt-0 relative'><Typed strings={['F o o d J i ! ! !']} typeSpeed={60}/></h1>
         <p className='sm:text-xl text-lg font-mono font-semibold text-gray-400 hover:text-[#00df9a] duration-700'><Typed strings={['Order', '"Ding-Dong" 🔔', 'Relax & Eat', 'Enjoy']} typeSpeed={40} backSpeed={30} loop/></p>
         <hr className='mt-14 border-black'/>
+        <p className='sm:text-base text-sm font-mono italic text-gray-400 duration-700'>*A Prototype food ordering website - author <a href="https://github.com/Sreeplays" className=' underline decoration-slice decoration-[#00df9a]'>@Sreeplays</a></p>
       {/* Sign in with google button */}
       <div  >
         {!user ?
