@@ -17,7 +17,7 @@ const MORE_CAT = (props) => {
     //Assigning these functions into an array to display the filtered results
     const [filteredDishesArray, setFilteredDishesArray] = useState([])
     const allMenu = useContext(AllMenuContext)
-    const [active, setActive] = useState("Vegetarian")
+    const [active, setActive] = useState("Chicken")
     const [initialPage, setInitialPage] = useState(1)
     const [itemsPerPage, setItemsPerPage] = useState(4)
     const [popUp, setPopUp] = useState(false)
@@ -38,7 +38,7 @@ const MORE_CAT = (props) => {
       const maxSpecialMeal = 9
       if (index < maxSpecialMeal) {
       return (
-        <a  href="javascript:;" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>
+        <a  href="#" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>
         <div className='border glass rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
        
         <img src={catItem.strMealThumb} alt="hot burger king hd png @transparentpng.com" className='w-20 '></img>
@@ -66,62 +66,13 @@ const MORE_CAT = (props) => {
     
   }
   async function getSingleMealData() {
-    const API_SOURCE = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian'
+    const API_SOURCE = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken'
     let response = await fetch(API_SOURCE)
     const singleDishData = await response.json()
     setSingleDish(singleDishData.meals)
     
   }
   
-  // SEARCH MEAL DATA FETCHING INPUTING 
-  const getSearchMealData = async (e) =>{
-    e.preventDefault();
-    const showAlert = () => {
-      alert('Meal not found !')
-      return;
-    }
-    const showMealData = (meals) => {
-      console.log("Look", meals)
-    }
-    // ALL THE VARIABLES USED FOR THE USER AND THE OUTPUT
-    const input = document.querySelector('input')
-    const title = document.querySelector("title")
-    const info = document.querySelector("info")
-    const img = document.querySelector("img")
-    
-    //FETCHING DATA
-    const fetchSearchData = async (val) => {
-      const SEARCH_API = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=' + val)
-      const response  = await SEARCH_API.json()
-      return response;
-    }
-    // GET USER INPUT
-    const val = input.value.trim()
-    if (val) {
-      const meals = await fetchSearchData(val)
-      if(!meals) {
-        showAlert()
-      }
-      showMealData(meals)
-      
-      
-    }else {
-      alert("Ooops Try Searching for a Meal :)")
-    }
-    
-  }
-  const form = document.querySelector("form")
-  const magnifier =  document.querySelector("magnifier")
-
-    if (form) {
-      form.addEventListener("submit", getSearchMealData)
-    }
-    if (magnifier) {
-      magnifier.addEventListener("click", getSearchMealData)
-    }
-  
-    
-    
   
 
   //by using useState we are showing the following async function in a faster way
@@ -153,11 +104,11 @@ const MORE_CAT = (props) => {
     }
 
     // Fetching a Single Dish based on any one category
-    let max = 9 
+    let max = 8
     let singleDishData = singleDish.map((catItem, index) =>{
       if (index < max) {
       return(
-        <a href="javascript:;" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
+        <a href="#" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
          <div className='border glass rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
         
         <img src={catItem.strMealThumb} alt={catItem.strMeal} className='w-20 '></img>
@@ -181,7 +132,7 @@ const MORE_CAT = (props) => {
         return catItems.strCategory === category
       }).map((catItem) => {
         return (
-          <a href="javascript:;" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
+          <a href="#" onClick={() => {showPopupHandler(catItem.strMeal, catItem.strMealThumb)}}>      
           <div className='border glass rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 backdrop-blur-xl'>
          
          <img src={catItem.strMealThumb} alt={catItem.strMeal} className='w-20 '></img>
@@ -208,7 +159,7 @@ const MORE_CAT = (props) => {
        return(         
         <div className=' rounded-md px-2 py-1 transition-transform transform hover:scale-110 delay-600 '>
           <div >
-            <Button onClick={() => {FilteredDishesResult(catItems.strCategory)}} className={catItems.strCategory == active ? 'bg-red-500 px-8 text-center py-2 rounded-lg bg-opacity-50 transition-colors transform text-white delay-200 mr-4': ' text-black bg-[#73eaa2] px-8 text-center py-2 rounded-lg bg-opacity-50 transition-colors transform hover:text-white delay-200 mr-4'} >{catItems.strCategory}</Button>
+            <Button onClick={() => {FilteredDishesResult(catItems.strCategory)}} className={catItems.strCategory == active ? 'bg-red-500 px-8 text-center py-2 rounded-lg bg-opacity-50 transition-colors transform text-white delay-200 mr-4': ' text-black bg-[#ff8b2b] px-8 text-center py-2 rounded-lg bg-opacity-50 transition-colors transform hover:text-white delay-200 mr-4'} >{catItems.strCategory}</Button>
 
           </div>
         </div>
@@ -237,21 +188,7 @@ const MORE_CAT = (props) => {
     </div>
     <div className='md:mt-[-68px] md:pt-16 mt-[-58px] pt-12'> 
      <div className='md:text-4xl text-xl font-serif rounded-md drop-shadow-md text-orange-400 text-center mb-14 mt-8'><h1 >Not getting enough from our most ultimatum items. Go for the Expedition !!</h1> <p className='text-base md:text-lg'>Select your deemed category and have a wide variety of selections!!</p></div>
-     <div className="flex items-center justify-center mt-8"> 
-     <form >
-      <input
-        type="text"
-        placeholder="Search..."
-        
-        className="px-4 py-2 border rounded-l-md focus:outline-none focus:ring focus:border-blue-300"
-      />
-      <button
-        className="bg-blue-500 text-white px-4 py-2 rounded-r-md" 
-      >
-        Search
-      </button>
-      </form>
-    </div>
+
     {/* Showing the categories present in the allMenus */}
       <div className='justify-start grid md:grid-cols-6 grid-cols-2 gap-3 pt-4 md:px-14 px-8 '>
         {categoriesmap}
@@ -259,7 +196,7 @@ const MORE_CAT = (props) => {
     {/* Showing the filtered dishes when clicking the categories button */}
       <div className=' justify-start grid md:grid-cols-4 grid-rows-1 gap-7  pt-4 md:px-36 px-36 '>
 
-        {singleDishData}
+      {singleDishData}
         {singleDishData !=0 ||  filteredDishesArray.length != 0 ? showPagination : <div className='text-red-600 text-center text-2xl'> <h3 >Sorry this is the end!</h3></div>}
         
       </div> 
