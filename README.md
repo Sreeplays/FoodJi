@@ -1,16 +1,11 @@
 
 # FoodJii!!! - A alternate dummy Food app.
 
-![App Screenshot](https://via.placeholder.com/578x400?text=In+Progress+(Coming+Soon))
-
-
-# FoodJii!!! - A alternate dummy Food app.
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app) 
 
-This works like almost other food ordering apps like swiggy and dominos. You guys can view it pretty soon as I complete all the functionalities. 
-
+This is a prototype of what online food ordering webapp looks like it's designed and function in a simple manner. You guys can view it pretty soon as I complete all the functionalities. If you want to buy this for your own purposes or want to use this theme to create your webpage please contact me through the gmail given in the profile. You have to, please, contact if you're having official plans regarding this. Other than for building your website in reference to this code can be done.
 
 ## Run Locally
 
