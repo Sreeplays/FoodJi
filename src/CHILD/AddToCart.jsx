@@ -33,7 +33,7 @@ const AddToCart = ({dishes}) => {
         )
     })
     return (
-        <div className='w-[110px] h-[40%] fixed top-[30%] right-0 flex border-r-1 bg-gray-500 p-2 py-2 mr-3 ml-3 px-4 rounded-lg shadow-lg bg-opacity-30 overflow-y-auto overflow-x-hidden'>
+        <div className=' w-[100px] h-[30%]  md:w-[110px] md:h-[40%] fixed top-[30%] right-0 flex border-r-1 bg-gray-500 p-2 py-2 mr-3 ml-3 px-4 rounded-lg shadow-lg bg-opacity-30 overflow-y-auto overflow-x-hidden'>
         <div className='w-[100%]  '>
             <h6 className="text-center font-italic font-bold text-white ">Your Cart </h6>
             {cartAdded}

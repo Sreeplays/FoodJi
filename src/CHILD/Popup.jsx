@@ -10,21 +10,16 @@ const Popup = ({closeBtn, detail, addToCartHandler}) => {
     return catItem.strMeal === detail
   }).map((catItem) => {
     return (
-      <div>
+      <div className="overflow-x-hidden">
       <div className="mb-36 ">
       <img src={catItem.strMealThumb} alt="Popup Image" className="w-[1300px] h-[220px] object-cover border-[rgb(17,17,17)] rounded-lg" />
       <h2 className="text-white text-center font-extrabold font-serif text-2xl relative">{catItem.strMeal}</h2>
-      <button className="absolute bg-[#ffb902] p-3 sm:bottom-[5rem] bottom-[8rem] sm:right-[10rem] right-[4rem] rounded-lg mb-1 hover:bg-green-300 delay-300" onClick={()=> addDishes({type: 'add_to_cart', payload: {item: catItem.strMeal, img: catItem.strMealThumb}})}>Add to Cart</button>
-      <p className="text-center justify-center top-[390px] right-[20px] fixed text-white font-mono font-extrabold text-[10px] px-36 ">{catItem.strInstructions}</p>
+      <p className="text-center text-lg text-[#00df9a] animate-bounce delay-100 duration-200">Enjoy a feasty ensilage!!</p>
+      <Button className="bg-[#ffb902] text-lg font-bold text-black md:p-3p p-2 mt-2 rounded-lg mb-1 hover:bg-green-300 delay-300 gap-4 ml-[-105px] mr-14" onClick={()=> addDishes({type: 'add_to_cart', payload: {item: catItem.strMeal, img: catItem.strMealThumb}})}>Add to Cart</Button>
+      <Button className="bg-green-400 mt-2 text-black px-6 py-2 rounded-lg text-xl font-bold cursor-pointer transition-all duration-300 hover:bg-red-500 absolute" onClick={closeBtn}>Close</Button>
 
       </div>
-      <h4 className="text-center top-[360px] absolute text-white font-mono font-extrabold text-xl pb-4">Instructions</h4>
-      <ul className="items-center justify-center bottom-[10rem] absolute flex sm:grid-rows-4 grid-rows-2 gap-3 mb-4 mt-4">
-        <li className="px-4 text-black rounded-lg py-2 gap-3 bg-red-500"> {catItem.strIngredient1} </li>
-        <li className="px-4 text-black rounded-lg py-2 gap-3 bg-red-500"> {catItem.strIngredient2} </li>
-        <li className="px-4 text-black rounded-lg py-2 gap-3 bg-red-500"> {catItem.strIngredient3} </li>
-        <li className="px-4 text-black rounded-lg py-2 gap-3 bg-red-500"> {catItem.strIngredient4} </li>
-      </ul>
+     
       </div>
     )
   })
@@ -34,14 +29,14 @@ const Popup = ({closeBtn, detail, addToCartHandler}) => {
 
     <div className="fixed left-0 right-0 top-0 bottom-0 z-50 bg-black bg-opacity-80 flex flex-col items-center justify-center">
     
-      <div className="bg-gray-900 w-[85%] sm:h-[80%] h-96 rounded-lg p-4 items-center ">
+      <div className="bg-gray-900 md:w-[50%] md:h-[50%] w-[300px] h-[365px] rounded-lg text-center">
         {popItem}
         {/* <p class="text-white text-md mb-6 h-44 overflow-auto">
           Your text content goes here. Your text content goes here. Your text
           content goes here.
         </p> */}
       <div>
-      <Button className="bg-green-400 sm:bottom-[5rem] bottom-[8rem] sm:left-[10rem] left-[4rem] text-black px-6 py-2 rounded-lg text-xl font-bold cursor-pointer transition-all duration-300 hover:bg-red-500 absolute" onClick={closeBtn}>Close</Button>
+      
       </div>
 
         </div>
