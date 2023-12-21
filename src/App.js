@@ -11,6 +11,7 @@ import { AuthContextProvider } from "./FireBase-Data-Config/AuthContext.js";
 import Protected from "./FireBase-Data-Config/protected.js";
 import Contact from "./Components/About.jsx";
 import Account from "./Components/Account.jsx";
+import Footer from "./Components/Footer.jsx";
 function App() {
   return (
     <AuthContextProvider>
@@ -22,6 +23,7 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/account" element={<Protected> <Account /> </Protected>} />
     </Routes>
+    <Footer />
     </AppProvider>
     </AuthContextProvider>
   );

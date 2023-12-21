@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Contactimg from '../assets/contactNow.png'
 import emailjs from '@emailjs/browser'
 import { Button, Form, Input, Label } from 'reactstrap';
+import { Helmet } from 'react-helmet';
 const Contact = () => {
   const [msg, setMsg] = useState(false)
   const sendEmail =(e) => {
@@ -17,6 +18,9 @@ const Contact = () => {
 };
   return (
     <div class="BG-IMG" >
+      <Helmet>
+        <title>Foodjii | Contact Us</title>
+      </Helmet>
       <img className='w-screen mt-8 h-48 object-cover mix-blend-multiply' src={Contactimg} alt="/" />
       <h1 className='text-[#00df9a] text-center text-5xl font-extrabold font-serif'>Contact Us</h1>
       <p className=' text-center text-lg font-extralight font-sans pt-10'>Have any querie, doubts, or any issues OR payment is not getting tranfered, please feel FREE to call us</p>

@@ -7,6 +7,7 @@ import {AllMenu} from './AllMenu'
 import AddToCart from '../CHILD/AddToCart'
 import {AppProvider} from '../globalContext/AppProvider'
 import Checkout from '../CHILD/Checkout'
+import { Helmet } from 'react-helmet'
 
 export const AllMenuContext = React.createContext()
 const OrderYourFood = () => {
@@ -28,7 +29,9 @@ const OrderYourFood = () => {
   return (
   <AppProvider>
   <AllMenu >
-  
+    <Helmet>
+      <title>Foodjii | Order</title>
+    </Helmet>
     
     <MORE_CAT /> 
     <Checkout/>

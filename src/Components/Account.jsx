@@ -1,6 +1,7 @@
 import React from 'react';
 import { UserAuth } from '../FireBase-Data-Config/AuthContext';
 import ReactTyped from 'react-typed';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -17,6 +18,9 @@ const Account = () => {
 
   return (
     <div className='w-[300px] m-auto'>
+      <Helmet>
+        <title>Foodjii | Account</title>
+      </Helmet>
       <h1 className='text-center text-5xl font-bold pt-12  from-purple-900 via-[#b89a55] to-purple-900 bg-gradient-to-r bg-clip-text text-transparent'>Account</h1>
       <hr className='mb-14 mt-5 border-black'/>
       <div>
