@@ -9,10 +9,10 @@ const Footer = () => {
             
             <div className="grid grid-cols-3 gap-6">
             
-            <a href="https://twitter.com/SriramS2008" target="_blank" rel="noopener noreferrer" className="text-lg transition duration-300 transform hover:scale-110">
+            <a href="https://twitter.com/SriramS2008" target="_blank" rel="noopener noreferrer" className="text-lg transition duration-300 transform hover:scale-150">
                 <i className="fab fa-twitter"><img src={twitter} alt="tweet png" className='w-5 text-white'/></i>
             </a>
-            <a href="https://www.instagram.com/__miichio" target="_blank" rel="noopener noreferrer" className="text-lg transition duration-300 transform hover:scale-110">
+            <a href="https://www.instagram.com/__miichio" target="_blank" rel="noopener noreferrer" className="text-lg transition duration-300 transform hover:scale-150">
                 <i className="fab fa-instagram"><img src={insta} alt="tweet png" className='w-5 text-white'/></i>
             </a>
             <a href="https://github.com/Sreeplays" target="_blank" rel="noopener noreferrer" className="text-lg transition duration-300 transform hover:scale-150">
