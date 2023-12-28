@@ -78,11 +78,11 @@ const CustomNavbar = () => {
 
 
     <div className='md:hidden absolute top-6 right-1' onClick={handleClick}>
-            {!nav ? (<AiOutlineMenu className=' text-white '/>) : (<AiOutlineClose className=' relative text-white'/>)}
+            {!nav ? (<AiOutlineMenu />) : (<AiOutlineClose className=' relative '/>)}
             
     </div>
 </Navbar>
-<div className={!nav ? 'hidden ease-in-out delay-500 text-white relative border-none' : ' w-full pt-2  pr-2 pl-2 ease-in-out delay-500 text-white bg-black bg-opacity-40'}>
+<div className={!nav ? 'hidden ease-in-out delay-500 relative border-none' : ' w-full pt-2  pr-2 pl-2 ease-in-out delay-500  bg-opacity-40'}>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/'>Home</NavLink></div>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/order'>Order Now!!!</NavLink></div>
                  <div className='border-b border-zinc-500 w-full pb-3 '><NavLink href='/contact'>Contact Us</NavLink></div> 
