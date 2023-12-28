@@ -4,7 +4,7 @@ import insta from '../assets/instagram.png'
 import git from '../assets/github.png'
 const Footer = () => {
   return (
-    <footer className=" bg-gray-800 text-white py-6">
+    <footer className=" bg-gray-800 text-white py-3">
         <div className="container mx-auto flex justify-between items-center">
             
             <div className="grid grid-cols-3 gap-6">
