@@ -1,5 +1,5 @@
 
-# FoodJii!!! - A alternate dummy Food app.
+# FoodJii!!! - An alternate dummy Food app.
 
 
 This project was bootstrapped with

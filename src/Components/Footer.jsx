@@ -5,9 +5,10 @@ import git from '../assets/github.png'
 const Footer = () => {
   return (
     <footer className=" bg-gray-800 text-white py-3">
+        
         <div className="container mx-auto flex justify-between items-center">
             
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-4 px-[-10px]">
             
             <a href="https://twitter.com/SriramS2008" target="_blank" rel="noopener noreferrer" className="text-lg transition duration-300 transform hover:scale-150">
                 <i className="fab fa-twitter"><img src={twitter} alt="tweet png" className='w-5 text-white'/></i>

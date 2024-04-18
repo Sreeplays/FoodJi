@@ -17,7 +17,7 @@ const Account = () => {
   };
 
   return (
-    <div className='w-[300px] h-full m-auto mb-16'>
+    <div className='w-[300px] h-[800px] h-full m-auto mb-16'>
       <Helmet>
         <title>Foodjii | Account</title>
       </Helmet>
